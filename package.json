@@ -1,0 +1,31 @@
+{
+  "name": "intervalue-witness",
+  "description": "InterValue witness",
+  "author": "InterValue",
+  "version": "1.0.0",
+  "main": "start.js",
+  "scripts": {
+    "witness": "node start.js"
+  },
+  "keywords": [
+    "witness",
+    "intervalue"
+  ],
+  "license": "MIT",
+  "repository": {
+    "url": "git://github.com/intervalue/intervalue-witness.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/intervalue/intervalue-witness/issues"
+  },
+  "browser": {
+    "request": "browser-request",
+    "secp256k1": "secp256k1/js"
+  },
+  "dependencies": {
+    "intervaluecore": "git+https://github.com/intervalue/intervaluecore.git",
+    "intervalue-headless": "git+https://github.com/intervalue/intervalue-headless.git",
+    "intervalue-explorer": "git+https://github.com/intervalue/intervalue-explorer.git"
+  }
+}
