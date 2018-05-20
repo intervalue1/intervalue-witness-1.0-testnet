@@ -1,12 +1,12 @@
 "use strict";
-require("intervaluecore/wallet.js");
+require("intervaluecore-1.0-testnet/wallet.js");
 const explorer = require('intervalue-explorer/explorer.js');
-var db = require('intervaluecore/db.js');
+var db = require('intervaluecore-1.0-testnet/db.js');
 const headlessWallet = require('intervalue-headless');
-const eventBus = require('intervaluecore/event_bus.js');
-const validationUtils = require("intervaluecore/validation_utils.js");
-const conf = require('intervaluecore/conf.js');
-const constants = require('intervaluecore/constants.js');
+const eventBus = require('intervaluecore-1.0-testnet/event_bus.js');
+const validationUtils = require("intervaluecore-1.0-testnet/validation_utils.js");
+const conf = require('intervaluecore-1.0-testnet/conf.js');
+const constants = require('intervaluecore-1.0-testnet/constants.js');
 
 function initRPC() {
     var rpc = require('json-rpc2');
@@ -122,9 +122,9 @@ function initRPC() {
 }
 
 function createIndivisibleAssetPayment(asset, amount, fromAddress, toAddress, toDevice, callback) {
-    var network = require('intervaluecore/network.js');
-    var indivisibleAsset = require('intervaluecore/indivisible_asset.js');
-    var walletGeneral = require('intervaluecore/wallet_general.js');
+    var network = require('intervaluecore-1.0-testnet/network.js');
+    var indivisibleAsset = require('intervaluecore-1.0-testnet/indivisible_asset.js');
+    var walletGeneral = require('intervaluecore-1.0-testnet/wallet_general.js');
 
     indivisibleAsset.composeAndSaveIndivisibleAssetPaymentJoint({
         asset: asset,
@@ -151,8 +151,8 @@ function createIndivisibleAssetPayment(asset, amount, fromAddress, toAddress, to
 }
 
 function postTimestamp(address) {
-    var composer = require('intervaluecore/composer.js');
-    var network = require('intervaluecore/network.js');
+    var composer = require('intervaluecore-1.0-testnet/composer.js');
+    var network = require('intervaluecore-1.0-testnet/network.js');
     var callbacks = composer.getSavingCallbacks({
         ifNotEnoughFunds: function(err) {
             console.error(err);
@@ -181,7 +181,7 @@ eventBus.once('headless_wallet_ready', function() {
 
 eventBus.on('paired', function(from_address) {
     console.log('Sucessfully paired with:' + from_address);
-    const device = require('intervaluecore/device.js');
+    const device = require('intervaluecore-1.0-testnet/device.js');
     device.sendMessageToDevice(from_address, "text", "Welcome to devnet Witness!");
 });
 

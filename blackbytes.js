@@ -1,14 +1,14 @@
 "use strict";
 const headlessWallet = require('intervalue-headless');
-const eventBus = require('intervaluecore/event_bus.js');
+const eventBus = require('intervaluecore-1.0-testnet/event_bus.js');
 
 function onError(err){
 	throw Error(err);
 }
 
 function createBlackbytes(address, onDone){
-	var composer = require('intervaluecore/composer.js');
-	var network = require('intervaluecore/network.js');
+	var composer = require('intervaluecore-1.0-testnet/composer.js');
+	var network = require('intervaluecore-1.0-testnet/network.js');
 
 	var callbacks = composer.getSavingCallbacks({
 		ifNotEnoughFunds: onError,

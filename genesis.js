@@ -1,16 +1,16 @@
 "use strict";
-const db = require('intervaluecore/db.js');
+const db = require('intervaluecore-1.0-testnet/db.js');
 const headlessWallet = require('intervalue-headless');
-const eventBus = require('intervaluecore/event_bus.js');
-const constants = require('intervaluecore/constants.js');
+const eventBus = require('intervaluecore-1.0-testnet/event_bus.js');
+const constants = require('intervaluecore-1.0-testnet/constants.js');
 
 function onError(err) {
     throw Error(err);
 }
 
 function createGenesisUnit(witness, onDone) {
-    var composer = require('intervaluecore/composer.js');
-    var network = require('intervaluecore/network.js');
+    var composer = require('intervaluecore-1.0-testnet/composer.js');
+    var network = require('intervaluecore-1.0-testnet/network.js');
 
     var savingCallbacks = composer.getSavingCallbacks({
         ifNotEnoughFunds: onError,

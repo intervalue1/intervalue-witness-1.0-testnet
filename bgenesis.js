@@ -1,13 +1,13 @@
 "use strict";
 const fs = require('fs');
-const db = require('intervaluecore/db.js');
+const db = require('intervaluecore-1.0-testnet/db.js');
 const headlessWallet = require('intervalue-headless');
-const eventBus = require('intervaluecore/event_bus.js');
-const constants = require('intervaluecore/constants.js');
-var objectHash = require('intervaluecore/object_hash.js');
+const eventBus = require('intervaluecore-1.0-testnet/event_bus.js');
+const constants = require('intervaluecore-1.0-testnet/constants.js');
+var objectHash = require('intervaluecore-1.0-testnet/object_hash.js');
 var Mnemonic = require('bitcore-mnemonic');
-var ecdsaSig = require('intervaluecore/signature.js');
-var validation = require('intervaluecore/validation.js');
+var ecdsaSig = require('intervaluecore-1.0-testnet/signature.js');
+var validation = require('intervaluecore-1.0-testnet/validation.js');
 
 
 const witness_budget = 20000000;
@@ -110,8 +110,8 @@ var signer = {
 
 
 function createGenesisUnit(witnesses, onDone) {
-    var composer = require('intervaluecore/composer.js');
-    var network = require('intervaluecore/network.js');
+    var composer = require('intervaluecore-1.0-testnet/composer.js');
+    var network = require('intervaluecore-1.0-testnet/network.js');
 
     var savingCallbacks = composer.getSavingCallbacks({
         ifNotEnoughFunds: onError,

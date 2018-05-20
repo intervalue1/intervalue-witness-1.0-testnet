@@ -1,9 +1,9 @@
 "use strict";
 const fs = require('fs');
 const util = require('util');
-const db = require('intervaluecore/db.js');
-const conf = require('intervaluecore/conf.js');
-const desktopApp = require('intervaluecore/desktop_app.js');
+const db = require('intervaluecore-1.0-testnet/db.js');
+const conf = require('intervaluecore-1.0-testnet/conf.js');
+const desktopApp = require('intervaluecore-1.0-testnet/desktop_app.js');
 var readline = require('readline');
 
 
