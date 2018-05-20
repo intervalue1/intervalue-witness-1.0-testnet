@@ -2,7 +2,7 @@
   "name": "intervalue-witness",
   "description": "InterValue witness",
   "author": "InterValue",
-  "version": "1.0.0",
+  "version": "1.0-testnet",
   "main": "start.js",
   "scripts": {
     "witness": "node start.js"
@@ -13,19 +13,19 @@
   ],
   "license": "MIT",
   "repository": {
-    "url": "git://github.com/intervalue/intervalue-witness.git",
+    "url": "git://github.com/intervalue/intervalue-witness-1.0-testnet.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/intervalue/intervalue-witness/issues"
+    "url": "https://github.com/intervalue/intervalue-witness-1.0-testnet/issues"
   },
   "browser": {
     "request": "browser-request",
     "secp256k1": "secp256k1/js"
   },
   "dependencies": {
-    "intervaluecore": "git+https://github.com/intervalue/intervaluecore.git",
-    "intervalue-headless": "git+https://github.com/intervalue/intervalue-headless.git",
-    "intervalue-explorer": "git+https://github.com/intervalue/intervalue-explorer.git"
+    "intervaluecore": "git+https://github.com/intervalue/intervaluecore-1.0-testnet.git",
+    "intervalue-headless": "git+https://github.com/intervalue/intervalue-headless-1.0-testnet.git",
+    "intervalue-explorer": "git+https://github.com/intervalue/intervalue-explorer-1.0-testnet.git"
   }
 }
